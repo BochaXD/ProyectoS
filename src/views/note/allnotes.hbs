@@ -1,0 +1,27 @@
+<div class="row">
+    {{#each notes}}
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title d-flex justify-content-between aling-items-center">
+                {{title}}<a href="/note/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                </h4>
+                <p>{{description}}</p>
+               <form action="note/delete/{{_id}}?_method=DELETE" method="POST">
+               <input type="hidden" name="_method" value="DELETE">
+                <button class="btn btn-danger btn-block btn-sm" type="submit">
+                    delete
+                </button>
+               </form>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="card mx-auto">
+        <div class="card-body">
+            <p class="lead"> no hay notas aun </p>
+            <a href="/note/add" class="btn btn-success btn-block"> Crea una</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
