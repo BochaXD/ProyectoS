@@ -24,11 +24,12 @@ router.post('/note/new-note',async (req,res)=>{
     }else{
     const newNote = new Note({title, description});
     await newNote.save();
-    req.flash('success_msg','Nota agregada')
+    req.flash('success_msg','Nota agregada');
     res.redirect('/notes');
     }
 
 });
+//id
 router.get('/notes',async (req,res) => {
     const notes = await Note.find().lean().sort({date:'desc'});
     
@@ -43,12 +44,14 @@ router.get('/note/edit/:id', async (req,res)=>{
 router.put('/note/editnote/:id', async (req,res)=>{
    const{title, description}=req.body;
    await Note.findByIdAndUpdate(req.params.id,{title,description});
+   req.flash('success_msg','Nota actualizada satisfactoriamente');
     res.redirect('/notes');
    
 });
 //eliminar
 router.delete('/note/delete/:id', async (req,res)=>{
     await Note.findByIdAndDelete(req.params.id);
+    req.flash('success_msg','Eliminado satisfactoriamente');
     res.redirect('/notes');
 });
 module.exports = router;
