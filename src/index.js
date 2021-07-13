@@ -27,10 +27,7 @@ app.use(session({
 }));
 app.use(flash());
 //variables globales
-app.use((req,res,next)=>{
-res.locals.success_msg=req.flash('success_msg');
-res.locals.error_msg=req.flash('error_msg');
-});
+
 
 //rutas
 app.use(require('./router/index'));
