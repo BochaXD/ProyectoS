@@ -27,7 +27,7 @@ body {
 }
 header {
   grid-area: header;
-  background-color: #5AC534;
+  background-color: #e5b61f;
 }
 main {
   grid-area: main;
@@ -35,7 +35,7 @@ main {
 }
 footer {
   grid-area: footer;
-  background-color: #5AC534;
+  background-color: #e5b61f;
   color: #ffffff;
 }
 /* Common */
@@ -52,7 +52,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #214B79;
+  color: #e57c1f;
 }
 ul {
   padding: 0;
@@ -85,7 +85,7 @@ button:hover {
   border: 0.1rem #FFFFFF  solid;
 }
 button.primary {
-  background-color: #C09AFF;
+  background-color: #e57c1f;
 }
 button.block {
   width: 100%;
@@ -104,7 +104,7 @@ a.brand {
   font-weight: bold;
 }
 .badge {
-  background-color: #f02020;
+  background-color: #0000;
   color: #ffffff;
   border-radius: 50%;
   padding: 0.2rem 0.7rem;
@@ -146,7 +146,7 @@ aside {
   position: fixed;
   width: 30rem;
   height: 100%;
-  background-color: #efefef;
+  background-color: #e57c1f;
   z-index: 1000;
   transform: translateX(-30rem);
   transition: all 0.5s;
@@ -216,7 +216,7 @@ img.large {
   margin: 0.1rem;
 }
 .rating span:last-child {
-  color: #FFFFFF ;
+  color: #e57c1f ;
 }
 /* Alert */
 .loading {
@@ -226,7 +226,7 @@ img.large {
   color: #20a020;
 }
 .danger {
-  color: #a02020;
+  color: #0000;
 }
 .alert {
   padding: 1rem;
@@ -234,7 +234,7 @@ img.large {
   border-radius: 0.5rem;
 }
 .alert-info {
-  color: #2020a0;
+  color: #000000;
   background-color: #e0e0ff;
 }
 .alert-danger {
@@ -270,7 +270,7 @@ img.large {
   min-width: 12rem;
   padding: 1rem;
   z-index: 1;
-  background-color: #203040;
+  background-color: #e57c1f;
   margin: 0;
   margin-top: 0.4rem;
   border-radius: 0.5rem;
